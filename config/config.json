@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "J4801787582",
+    "password": "rootroot",
     "database": "doomsdaydb",
     "host": "localhost",
     "dialect": "mysql"
