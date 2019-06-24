@@ -20,3 +20,11 @@ body {
 }
 
 
+.cardscene{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plansForRepsonse{
+  margin: 15px;
+}
