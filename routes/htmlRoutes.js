@@ -7,11 +7,11 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/scenarios", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/scenarios.html"));
+  app.get("/scenario", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/scenario.html"));
   });
 
-  app.get("/view.html", function(req, res) {
+  app.get("/view", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/view.html"));
   });
 
