@@ -8,7 +8,13 @@
   background-size: cover;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
 
+.welcome {
+  text-align: center;
+  color:black;
+  font-size: 72px;
 }
 
 .cardinfo {
@@ -28,3 +34,70 @@ body {
 .plansForRepsonse{
   margin: 15px;
 }
+
+/* smoke attempt 2 */
+.smoke{ 
+  z-index: 3;
+  width: 1px; 
+  height: 160px; 
+  bottom: 30px;
+}
+.smoke span { 
+  display: block;
+  bottom: -35px; 
+  height: 0px; 
+  width: 0px;
+	border: 35px solid #4b4b4b;
+	border-radius: 35px;
+  opacity: 0;
+	transform: scale(0.2);
+}
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
+}
+
+.smoke .s0 { animation: smokeL 10s 0s infinite }
+.smoke .s1 { animation: smokeR 10s 1s infinite }
+.smoke .s2 { animation: smokeL 10s 2s infinite }
+.smoke .s3 { animation: smokeR 10s 3s infinite }
+.smoke .s4 { animation: smokeL 10s 4s infinite }
+.smoke .s5 { animation: smokeR 10s 5s infinite }
+.smoke .s6 { animation: smokeL 10s 6s infinite }
+.smoke .s7 { animation: smokeR 10s 7s infinite }
+.smoke .s8 { animation: smokeL 10s 8s infinite }
+.smoke .s9 { animation: smokeR 10s 9s infinite }
+
+/* .smoke{ smoke 1st attempt
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+}
+
+@keyframes animate {
+  0%{
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0)
+  }
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+} */
