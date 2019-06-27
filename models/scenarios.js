@@ -8,18 +8,23 @@ module.exports = function(sequelize, DataTypes) {
     },
     scenario_title: {
       type: DataTypes.STRING,
-      required: true
+      required: true,
+      len: [2,100]
     },
     scenario_author: {
       type: DataTypes.STRING,
-      required: true
+      required: true,
+      is: ["^[a-z]+$",'i'],     // will only allow letters
+      len: [2,50]           // don't allow empty strings
     },
     scenario_content: {
       type: DataTypes.TEXT,
-      required: true
+      required: true,
+      len: [100, 65000]
     },
     scenario_image_url: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      isUrl: true
     },
     scenario_created_at: {
       type: DataTypes.DATE,
