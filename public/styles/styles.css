@@ -45,7 +45,7 @@ body {
 }
 
 /* smoke attempt 2 */
-.smoke{ 
+/* .smoke{ 
   z-index: 3;
   width: 1px; 
   height: 160px; 
@@ -82,7 +82,7 @@ body {
 .smoke .s6 { animation: smokeL 10s 6s infinite }
 .smoke .s7 { animation: smokeR 10s 7s infinite }
 .smoke .s8 { animation: smokeL 10s 8s infinite }
-.smoke .s9 { animation: smokeR 10s 9s infinite }
+.smoke .s9 { animation: smokeR 10s 9s infinite } */
 
 /* .smoke{ smoke 1st attempt
   opacity: 0;
