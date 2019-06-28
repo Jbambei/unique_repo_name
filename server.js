@@ -14,6 +14,8 @@ app.use(express.static("public"));
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+require("./routes/scenario-api-routes")(app);
+require("./routes/plans-api-routes")(app);
 
 var syncOptions = { force: false };
 
