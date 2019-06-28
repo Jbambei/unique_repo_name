@@ -14,8 +14,10 @@ module.exports = function(sequelize, DataTypes) {
     scenario_author: {
       type: DataTypes.STRING,
       required: true,
-      is: ["^[a-z]+$", "i"], // will only allow letters
-      len: [2, 50] // don't allow empty strings
+
+      is: ["^[a-z]+$", "i"], //will only allow letters
+      len: [2, 50] //don't allow empty strings
+
     },
     scenario_content: {
       type: DataTypes.TEXT,
@@ -31,5 +33,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  Scenarios.associate = function(models) {
+    Scenarios.hasMany(models.Plans, {
+      onDelete: "cascade"
+    });
+  };
   return Scenarios;
 };
