@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
-  var Scenarios = sequelize.define("Scenario", {
+  var Scenarios = sequelize.define("scenarios", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
