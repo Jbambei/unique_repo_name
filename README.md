@@ -19,7 +19,7 @@ This website is deployed with Heroku. Visit it at ***PLACE URL HERE***
 
 ## Built With
 
-Bootstrap web framework
-Sequelize ORM 
-JQuery
-MySQL
+1. Bootstrap web framework
+1. Sequelize ORM 
+1. JQuery
+1. MySQL
