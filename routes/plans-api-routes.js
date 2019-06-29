@@ -6,7 +6,7 @@ module.exports = function(app) {
       res.json(dbPlans);
     });
   });
-  app.get("/api/plan/:id", function(req, res) {
+  app.get("/api/plans/:id", function(req, res) {
     db.Plans.findOne({
       where: {
         id: req.params.id

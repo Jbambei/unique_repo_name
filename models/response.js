@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
-  var Response = sequelize.define("Plans", {
+  var Response = sequelize.define("Response", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -16,10 +16,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       required: true,
       len: [100, 65000]
-    },
-    scenario_created_at: {
-      type: DataTypes.DATE,
-      allowNull: false
     }
   });
   return Response;
