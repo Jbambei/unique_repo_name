@@ -17,7 +17,6 @@ module.exports = function(sequelize, DataTypes) {
 
       is: ["^[a-z]+$", "i"], //will only allow letters
       len: [2, 50] //don't allow empty strings
-
     },
     scenario_content: {
       type: DataTypes.TEXT,
