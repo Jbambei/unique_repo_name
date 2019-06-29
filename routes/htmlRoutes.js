@@ -23,9 +23,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/writeplan.html"));
   });
 
-  app.get("/scenario", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/scenario.html/:id"));
-  });
+  // app.get("/scenario", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/scenario.html/:id"));
+  // });
 
   // app.get("*", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/index.html"));
