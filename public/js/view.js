@@ -1,5 +1,5 @@
 console.log("connected");
-// jQuery(function() {
+$(function() {
 //   $.ajax("/api/scenario", {
 //     type: "get"
 //   }).then(function(data) {
@@ -17,7 +17,7 @@ console.log("connected");
 //       $("#briefDescription").text(briefDescription);
 //     }
 //   });
-//     $.get("/api/scenario", function(data){
-//         console.log(data);
-//     })
-// });
+    $.get("/api/scenario/", function(data){
+        console.log(data);
+    })
+});

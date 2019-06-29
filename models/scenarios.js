@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
-  var Scenarios = sequelize.define("scenarios", {
+  var Scenarios = sequelize.define("Scenario", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -27,10 +27,6 @@ module.exports = function(sequelize, DataTypes) {
     scenario_image_url: {
       type: DataTypes.TEXT,
       isUrl: true
-    },
-    scenario_created_at: {
-      type: DataTypes.DATE,
-      allowNull: false
     }
   });
   Scenarios.associate = function(models) {

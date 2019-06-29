@@ -21,10 +21,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       required: true,
       len: [100, 65000]
-    },
-    plan_created_at: {
-      type: DataTypes.DATE,
-      allowNull: false
     }
   });
   Plans.associate = function(models) {
