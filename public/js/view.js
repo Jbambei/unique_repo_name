@@ -7,10 +7,14 @@ $(function() {
     type: "get"
   }).then(function(data) {
     for (var i=0; i < data.length; i++){
+        var fullDescription = data[i].scenario_content
+        console.log(fullDescription)
+        var briefDescription = fullDescription.slice(0, 25)
+        console.log(briefDescription)
         console.log(data);
         console.log(data[i].scenario_title);
         console.log(data[i].scenario_author);
-        console.log(data[i].scenario_content);
+        // console.log(data[i].scenario_content);
         console.log(data[i].scenario_image_url);
         createScenarioOne()
         createScenarioTitle.attr("id", "cardTitle" + data[i].id)
@@ -18,7 +22,7 @@ $(function() {
         cardText.attr("id", "cardText" + data[i].id)
         $("#cardTitle" + data[i].id).html(data[i].scenario_title);
         $("#cardPicture" + data[i].id).attr("src", data[i].scenario_image_url);
-        $("#cardText" + data[i].id).text(data[i].scenario_content);
+        $("#cardText" + data[i].id).text(briefDescription);
     }
   });
 });
