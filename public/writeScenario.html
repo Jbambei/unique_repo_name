@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./js/writeScenario.js"></script>
 </head>
 
 <body class="homeBackground">
@@ -50,23 +52,29 @@
             <h1 class="text-center"> Create Your Own Doomsday Scenario </h1>
         </div>
         <section class="cardinfo">
-            <form>
+            <form class="newScenario">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Author:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Name Here">
+                    <label for="scenarioAuthor">Author:</label>
+                    <input type="text" class="form-control" id="scenarioAuthor" placeholder="Your Name Here">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Name Of Scenario</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                    <label for="scenarioTitle">Name Of Scenario</label>
+                    <input type="text" class="form-control" id="scenarioTitle"
                         placeholder="Doomsday Scenario">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Story</label>
-                    <textarea class="form-control" placeholder="Your Story Here" id="exampleFormControlTextarea1"
+                    <label for="scenarioImage">Image URL</label>
+                    <input type="text" class="form-control" id="scenarioImage"
+                        placeholder="Place Your Image URL Here">
+                </div>
+                <div class="form-group">
+                    <label for="scenarioStory">Story</label>
+                    <textarea class="form-control" placeholder="Your Story Here" id="scenarioStory"
                         rows="5"></textarea>
                 </div>
+                <button type="submit" id ="newScenarioSubmit" class="btn btn-secondary">Submit</button>
             </form>
-            <button type="button" class="btn btn-secondary">Submit</button>
+
         </section>
 
     </div>
