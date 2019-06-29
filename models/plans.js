@@ -24,11 +24,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   Plans.associate = function(models) {
-    Plans.belongsTo(models.Scenario, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    Plans.belongsTo(models.Scenario, {});
   };
   return Plans;
 };
