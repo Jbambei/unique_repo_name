@@ -3,6 +3,7 @@ var createScenarioTitle = $("<h5>");
 var createScenarioPicture = $("<img>");
 var cardText = $("<p>");
 var scenarioButton = $("<button>");
+var anchor = $("<a>")
 $(function() {
   $.ajax("/api/scenario", {
     type: "get"
@@ -22,9 +23,14 @@ $(function() {
         createScenarioPicture.attr("id", "cardPicture" + data[i].id);
         cardText.attr("id", "cardText" + data[i].id);
         scenarioButton.attr("id" , "cardButton" + data[i].id)
+        anchor.attr("id" , "anchorId" + data[i].id)
+        anchor.attr("href", "/scenario/" + data[i].id)
         $("#cardTitle" + data[i].id).html(data[i].scenario_title);
         $("#cardPicture" + data[i].id).attr("src", data[i].scenario_image_url);
         $("#cardText" + data[i].id).text(briefDescription);
+        $("#anchorId" + data[i].id).on("click", function (event) {
+            event.preventDefault();
+        });
     };
   });
 });
@@ -65,4 +71,6 @@ function createScenario(){
     scenarioButton.text("View Full Scenario");
     scenarioButton.addClass("btn btn-primary");
     createCardTextColumn.append(scenarioButton);
+    anchor = $("<a>")
+    scenarioButton.append(anchor)
 }
