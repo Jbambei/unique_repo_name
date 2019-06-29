@@ -36,7 +36,7 @@ function createScenario(){
     createRow.addClass("row no-gutters");
     newScenario.append(createRow);
     var createColumn = $("<div>");
-    createColumn.addClass("col-12 col-sm-6 col-md-6");
+    createColumn.addClass("col-4 col-sm-4 col-md-4");
     createRow.append(createColumn)
     createScenarioTitle = $("<h5>");
     createColumn.append(createScenarioTitle);
@@ -56,7 +56,7 @@ function createScenario(){
     });
     createColumn.append(createScenarioPicture);
     var createCardTextColumn = $("<div>");
-    createCardTextColumn.addClass("col-6 col-md-6");
+    createCardTextColumn.addClass("col-8 col-md-8");
     createColumn.after(createCardTextColumn)
     cardText = $("<p>");
     cardText.addClass("card-text");
