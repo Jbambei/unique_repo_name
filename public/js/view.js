@@ -2,31 +2,33 @@ console.log("connected");
 var createScenarioTitle = $("<h5>");
 var createScenarioPicture = $("<img>");
 var cardText = $("<p>");
+var scenarioButton = $("<button>");
 $(function() {
   $.ajax("/api/scenario", {
     type: "get"
   }).then(function(data) {
     for (var i=0; i < data.length; i++){
-        var fullDescription = data[i].scenario_content
-        console.log(fullDescription)
-        var briefDescription = fullDescription.slice(0, 25)
-        console.log(briefDescription)
+        var fullDescription = data[i].scenario_content;
+        console.log(fullDescription);
+        var briefDescription = fullDescription.slice(0, 25);
+        console.log(briefDescription);
         console.log(data);
         console.log(data[i].scenario_title);
         console.log(data[i].scenario_author);
         // console.log(data[i].scenario_content);
         console.log(data[i].scenario_image_url);
-        createScenarioOne()
-        createScenarioTitle.attr("id", "cardTitle" + data[i].id)
-        createScenarioPicture.attr("id", "cardPicture" + data[i].id)
-        cardText.attr("id", "cardText" + data[i].id)
+        createScenario();
+        createScenarioTitle.attr("id", "cardTitle" + data[i].id);
+        createScenarioPicture.attr("id", "cardPicture" + data[i].id);
+        cardText.attr("id", "cardText" + data[i].id);
+        scenarioButton.attr("id" , "cardButton" + data[i].id)
         $("#cardTitle" + data[i].id).html(data[i].scenario_title);
         $("#cardPicture" + data[i].id).attr("src", data[i].scenario_image_url);
         $("#cardText" + data[i].id).text(briefDescription);
-    }
+    };
   });
 });
-function createScenarioOne(){
+function createScenario(){
     var newScenario = $("<section>");
     newScenario.addClass("cardinfo");
     $("#viewAllScenarios").append(newScenario)
@@ -59,7 +61,7 @@ function createScenarioOne(){
     cardText = $("<p>");
     cardText.addClass("card-text");
     createCardTextColumn.append(cardText);
-    var scenarioButton = $("<button>");
+    scenarioButton = $("<button>");
     scenarioButton.text("View Full Scenario");
     scenarioButton.addClass("btn btn-primary");
     createCardTextColumn.append(scenarioButton);
