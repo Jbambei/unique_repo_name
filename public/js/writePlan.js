@@ -16,8 +16,8 @@ $(function() {
     event.preventDefault();
 
     if (
-      $("#planAuthor").val() !== "" ||
-      $("#planName").val() !== "" ||
+      $("#planAuthor").val() !== "" &&
+      $("#planName").val() !== "" &&
       $("#newPlanStory").val() !== ""
     ) {
       var newPlan = {

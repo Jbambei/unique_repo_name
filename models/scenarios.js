@@ -5,28 +5,28 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false
+      required: true
     },
     scenario_title: {
       type: DataTypes.STRING,
       len: [2, 100],
-      allowNull: false
+      required: true
     },
     scenario_author: {
       type: DataTypes.STRING,
       is: ["^[a-z]+$", "i"], //will only allow letters
       len: [2, 50], //don't allow empty strings
-      allowNull: false
+      required: true
     },
     scenario_content: {
       type: DataTypes.TEXT,
       len: [100, 65000],
-      allowNull: false
+      required: true
     },
     scenario_image_url: {
       type: DataTypes.TEXT,
       isUrl: true,
-      allowNull: false
+      required: true
     }
   });
   Scenarios.associate = function(models) {

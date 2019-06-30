@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     plan_content: {
       type: DataTypes.TEXT,
       len: [100, 65000],
-      allowNull: false
+      required: true,
     }
   });
   Plans.associate = function(models) {

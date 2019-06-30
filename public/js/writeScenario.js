@@ -4,9 +4,9 @@ $(function() {
     event.preventDefault();
 
     if (
-      $("#scenarioTitle").val() !== "" ||
-      $("#scenarioAuthor").val() !== "" ||
-      $("#scenarioStory").val() !== "" ||
+      $("#scenarioTitle").val() !== "" &&
+      $("#scenarioAuthor").val() !== "" &&
+      $("#scenarioStory").val() !== "" &&
       $("#scenarioImage").val() !== ""
     ) {
       var newScenario = {
