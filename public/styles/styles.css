@@ -104,6 +104,7 @@ body {
 
 .cardinfo{
   padding: 2%;
+  animation-delay: 0.5s;
 }
 /* smoke attempt 2 */
 /* .smoke{ 

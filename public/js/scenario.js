@@ -38,7 +38,7 @@ $(function() {
 function createPlan() {
   console.log("create me");
   var newPlan = $("<section>");
-  newPlan.addClass("cardinfo");
+  newPlan.addClass("cardinfo animated fadeIn");
   $("#plansDisplay").append(newPlan);
   var createRow = $("<div>");
   createRow.addClass("row no-gutters");
