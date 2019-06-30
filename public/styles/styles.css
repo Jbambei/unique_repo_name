@@ -6,6 +6,8 @@
   background-color: black;
   background-image: url("../Images/backgroundHome.png") ;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
 }
@@ -43,6 +45,66 @@ body {
   margin: 15px;
 }
 
+#writePlanButton {
+  margin-top: 2%;
+  background-color: #747762;
+  color: #ceceb7;
+  font-size: 16px;
+  /* margin-bottom: 2%; */
+}
+
+#writePlanButton:hover {
+  background-color: #ceceb7;
+  color:#747762;
+}
+
+.scenarioButton {
+  background-color: #747762;
+  color: #ceceb7;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: #ceceb7
+}
+
+.scenarioButton:hover {
+  background-color: #ceceb7;
+  color: #747762;
+  border-width: 2px;
+  border-color: #ceceb7;
+}
+
+.searchButton {
+  background-color: #343a40;
+  color: #ceceb7;
+  border-width: 2px;
+  border-color: #ceceb7;
+}
+
+.searchButton:hover{
+  background-color: #ceceb7;
+  color: #343a40;
+  border-width: 2px;
+  border-color: #343a40;
+}
+
+.submitPlanButton{
+  background-color: #747762;
+  color: #ceceb7;
+  border-width: 2px;
+  border: #ceceb7
+}
+
+.submitPlanButton:hover{
+  background-color: #ceceb7;
+  color: #747762;
+  border-width: 2px;
+  border: #747762
+}
+
+.cardinfo{
+  padding: 2%;
+}
 /* smoke attempt 2 */
 /* .smoke{ 
   z-index: 3;
