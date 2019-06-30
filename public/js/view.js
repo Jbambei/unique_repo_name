@@ -70,6 +70,11 @@ function createScenario(){
     scenarioButton = $("<button>");
     scenarioButton.text("View Full Scenario");
     scenarioButton.addClass("btn btn-primary");
+    scenarioButton.css({
+        position: "absolute",
+        right: "0",
+        bottom: 0
+    });
     createCardTextColumn.append(scenarioButton);
     anchor = $("<a>")
     scenarioButton.append(anchor)
