@@ -107,6 +107,10 @@ body {
   animation-delay: 0.5s;
 }
 
+.searchBar{
+  margin-right: 10%;
+}
+
 .nav-link{
   font-size:16px !important;
 }
