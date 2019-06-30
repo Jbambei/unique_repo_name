@@ -44,7 +44,7 @@ function createPlan() {
   createRow.addClass("row no-gutters");
   newPlan.append(createRow);
   var createColumn = $("<div>");
-  createColumn.addClass("col-12 col-sm-6 col-md-6");
+  createColumn.addClass("col-12 col-sm-9 col-md-9");
   createRow.append(createColumn);
   planTitle = $("<h5>");
   planTitle.addClass("card-title plansForResponse");
@@ -53,7 +53,7 @@ function createPlan() {
   planDescription.addClass("plansForResponse");
   createColumn.append(planDescription);
   var createSecondColumn = $("<div>");
-  createSecondColumn.addClass("col-6, col-md-6");
+  createSecondColumn.addClass("col-3, col-md-3");
   createRow.append(createSecondColumn);
   var authorLine = $("<p>");
   authorLine.addClass("card-text plansForResponse");
