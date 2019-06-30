@@ -29,7 +29,7 @@ $(function() {
       planAuthor.attr("id", "planAuthor" + data[i].id);
       planDescription.attr("id", "planDescription" + data[i].id);
       $("#planTitle" + data[i].id).html("Plan Title: " + data[i].plan_title);
-      $("#planAuthor" + data[i].id).html(data[i].plan_author);
+      $("#planAuthor" + data[i].id).html("Author: " + data[i].plan_author);
       $("#planDescription" + data[i].id).text(data[i].plan_content);
     }
   });
@@ -55,11 +55,7 @@ function createPlan() {
   var createSecondColumn = $("<div>");
   createSecondColumn.addClass("col-3, col-md-3");
   createRow.append(createSecondColumn);
-  var authorLine = $("<p>");
-  authorLine.addClass("card-text plansForResponse");
-  authorLine.html("Author: ");
-  createSecondColumn.append(authorLine);
   planAuthor = $("<div>");
   planAuthor.addClass("plansForResponse");
-  authorLine.append(planAuthor);
+  createSecondColumn.append(planAuthor);
 }
