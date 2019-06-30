@@ -19,8 +19,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     plan_content: {
       type: DataTypes.TEXT,
-      required: true,
-      len: [100, 65000]
+      len: [100, 65000],
+      allowNull: false
     }
   });
   Plans.associate = function(models) {
