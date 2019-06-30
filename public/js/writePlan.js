@@ -38,12 +38,14 @@ $(function() {
     }
     console.log(newPlan);
 
-    $.ajax("/api/plans", {
-      type: "POST",
-      data: newPlan
-    }).then(function() {
-      console.log("New Plan Created");
-      location.pathname = "./view";
-    });
+
+      $.ajax("/api/plans", {
+          type: "POST",
+          data: newPlan
+      }).then(function(){
+          console.log("New Plan Created");
+          location.pathname = "./scenario";
+      });
+
   });
 });

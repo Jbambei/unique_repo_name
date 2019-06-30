@@ -28,9 +28,9 @@ $(function() {
       planTitle.attr("id", "planTitle" + data[i].id);
       planAuthor.attr("id", "planAuthor" + data[i].id);
       planDescription.attr("id", "planDescription" + data[i].id);
-      $("#planTitle").html("Plan Title: " + data.plan_title);
-      $("#planAuthor").html(data[i].plan_author);
-      $("#planDescription").text(data[i].plan_content);
+      $("#planTitle" + data[i].id).html("Plan Title: " + data[i].plan_title);
+      $("#planAuthor" + data[i].id).html(data[i].plan_author);
+      $("#planDescription" + data[i].id).text(data[i].plan_content);
     }
   });
 });
@@ -51,7 +51,7 @@ function createPlan() {
   createColumn.append(planTitle);
   planDescription = $("<div>");
   planDescription.addClass("plansForResponse");
-  planTitle.append(planDescription);
+  createColumn.append(planDescription);
   var createSecondColumn = $("<div>");
   createSecondColumn.addClass("col-6, col-md-6");
   createRow.append(createSecondColumn);
@@ -61,4 +61,5 @@ function createPlan() {
   createSecondColumn.append(authorLine);
   planAuthor = $("<div>");
   planAuthor.addClass("plansForResponse");
+  authorLine.append(planAuthor);
 }
