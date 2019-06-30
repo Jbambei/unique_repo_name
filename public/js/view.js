@@ -11,7 +11,7 @@ $(function () {
     for (var i = 0; i < data.length; i++) {
       var fullDescription = data[i].scenario_content;
       console.log(fullDescription);
-      var briefDescription = fullDescription.slice(0, 25);
+      var briefDescription = fullDescription.slice(0, 600);
       console.log(briefDescription);
       console.log(data);
       console.log(data[i].scenario_title);
@@ -83,13 +83,7 @@ function createScenario() {
   anchor = $("<a>");
   scenarioButton = $("<button>");
   scenarioButton.text("View Full Scenario");
-  scenarioButton.addClass("btn btn-primary");
-  scenarioButton.css({
-    position: "absolute",
-    right: "0",
-    bottom: 0
-  });
+  scenarioButton.addClass("btn btn-primary scenarioButton");
   anchor.append(scenarioButton)
   createCardTextColumn.append(anchor);
-
 }
