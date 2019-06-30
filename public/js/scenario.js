@@ -1,4 +1,6 @@
 console.log("connected");
+var localId = parseInt(localStorage.id);
+console.log(localId);
 $(function() {
   $.ajax("/api/scenario/" + localStorage.id, {
     type: "get"
@@ -24,13 +26,16 @@ $(function() {
       console.log(data[i].plan_title);
       console.log(data[i].plan_author);
       console.log(data[i].plan_content);
-      createPlan();
-      planTitle.attr("id", "planTitle" + data[i].id);
-      planAuthor.attr("id", "planAuthor" + data[i].id);
-      planDescription.attr("id", "planDescription" + data[i].id);
-      $("#planTitle" + data[i].id).html("Plan Title: " + data[i].plan_title);
-      $("#planAuthor" + data[i].id).html("Author: " + data[i].plan_author);
-      $("#planDescription" + data[i].id).text(data[i].plan_content);
+      console.log(data[i].ScenarioId);
+      if (localId === data[i].ScenarioId) {
+        createPlan();
+        planTitle.attr("id", "planTitle" + data[i].id);
+        planAuthor.attr("id", "planAuthor" + data[i].id);
+        planDescription.attr("id", "planDescription" + data[i].id);
+        $("#planTitle" + data[i].id).html("Plan Title: " + data[i].plan_title);
+        $("#planAuthor" + data[i].id).html("Author: " + data[i].plan_author);
+        $("#planDescription" + data[i].id).text(data[i].plan_content);
+      }
     }
   });
 });
