@@ -41,6 +41,9 @@ $(function () {
 function createScenario() {
   var newScenario = $("<section>");
   newScenario.addClass("cardinfo");
+  newScenario.css({
+      padding: "2%"
+  })
   $("#viewAllScenarios").append(newScenario)
   var createRow = $("<div>");
   createRow.addClass("row no-gutters");
@@ -49,6 +52,9 @@ function createScenario() {
   createColumn.addClass("col-4 col-sm-4 col-md-4");
   createRow.append(createColumn)
   createScenarioTitle = $("<h5>");
+  createScenarioTitle.css({
+      "font-size":"36px"
+  })
   createColumn.append(createScenarioTitle);
   createScenarioTitle.addClass("card-title");
   var createCardBody = $("<div>");
@@ -70,6 +76,9 @@ function createScenario() {
   createColumn.after(createCardTextColumn)
   cardText = $("<p>");
   cardText.addClass("card-text");
+  cardText.css({
+      "margin-top": "8%"
+  })
   createCardTextColumn.append(cardText);
   anchor = $("<a>");
   scenarioButton = $("<button>");
