@@ -1,6 +1,6 @@
 console.log("connected");
 $(function() {
-  $.ajax("/api/scenario/:id", {
+  $.ajax("/api/scenario/" + localStorage.id, {
     type: "get"
   }).then(function(data) {
     console.log(data);
