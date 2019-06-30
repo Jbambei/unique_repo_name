@@ -7,6 +7,8 @@
     <title>Doomsday - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate CSS New Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Days+One|Shojumaru&display=swap" rel="stylesheet">
@@ -17,16 +19,21 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navigation">
             <div
-                class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0 userAuth unauthenticated pull-right">
+                class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0 userAuth unauthenticated pull-right container">
                 <ul class="navbar-nav ml-auto text-center">
 
                     <li class="nav-item">
                         <a href="/" class="nav-link">Home</a>
                     </li>
-
+                    <li class="nav-item">
+                            <p class="nav-link">|</p>
+                    </li>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="/view">View Doomsday Scenarios</a>
+                        </li>
+                        <li class="nav-item">
+                                <p class="nav-link">|</p>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/writescenario">Create a Doomsday Scenario</a>
@@ -34,7 +41,7 @@
                     </ul>
             </div>
 
-            <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+            <!-- <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
 
                 <ul class="navbar-nav ml-auto">
                     <form class="form-inline">
@@ -42,17 +49,17 @@
                         <button class="btn btn-outline-success my-2 my-sm-0 searchButton" type="submit">Search</button>
                     </form>
                 </ul>
-            </div>
+            </div> -->
         </nav>
     </header>
     <!-- Nav Bar Closed -->
     <div class="container">
         <div>
-            <h1 class="welcome">Welcome to Doomsday</h1>
+            <h1 class="welcome animated slideInDown">Welcome to Doomsday</h1>
         </div>
         <div class="row">
             <div class="indexDescription col-6">
-                <h2>Thank you for visiting the Doomsday app. On our app, you will have the chance to write and view
+                <h2 class = "animated slideInLeft">Thank you for visiting the Doomsday app. On our app, you will have the chance to write and view
                     different possible doomsday scenarios. If you view a doomsday scenario, you can view the plans on
                     how to
                     react or prepare for that scenario. Enjoy your experience.</h2>

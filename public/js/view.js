@@ -40,7 +40,7 @@ $(function () {
 });
 function createScenario() {
   var newScenario = $("<section>");
-  newScenario.addClass("cardinfo animated fadeIn");
+  newScenario.addClass("cardinfo animated rollIn");
   newScenario.css({
       padding: "2%"
   })
