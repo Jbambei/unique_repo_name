@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       len: [2, 50]
     },
     plan_content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       required: true,
       len: [100, 65000]
     }
