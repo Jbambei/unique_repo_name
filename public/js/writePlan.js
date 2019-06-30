@@ -34,7 +34,7 @@ $(function() {
           data: newPlan
       }).then(function(){
           console.log("New Plan Created");
-          location.pathname = "./view";
+          location.pathname = "./scenario";
       });
   });
 });
