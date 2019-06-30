@@ -106,6 +106,10 @@ body {
   padding: 2%;
   animation-delay: 0.5s;
 }
+
+.nav-link{
+  font-size:16px !important;
+}
 /* smoke attempt 2 */
 /* .smoke{ 
   z-index: 3;
