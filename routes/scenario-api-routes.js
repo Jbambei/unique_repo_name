@@ -20,4 +20,22 @@ module.exports = function(app) {
       res.json(dbScenario);
     });
   });
+  app.delete("/api/scenario/:id", function(req, res) {
+    db.Scenario.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbScenario) {
+      res.json(dbScenario);
+    });
+  });
+  app.put("/api/scenario", function(req, res) {
+    db.Scenario.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbScenario) {
+      res.json(dbScenario);
+    });
+  });
 };
