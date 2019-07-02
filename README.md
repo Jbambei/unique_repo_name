@@ -6,7 +6,7 @@ A website for all your doomsday scenario wants and needs. From Nuclear fallout t
 
 To run locally, first clone the repo. Then you'll need to run the schema and seeds to have some basic data and the database. Don't forget to enter your information in the configs.json file to have access to your database. The server is configured to listen on port 3000, so visit http://localhost:3000/ to view the project. 
 
-This project is also deployed at ***PLACE URL HERE***
+This project is also deployed at https://dudley-toonie-83402.herokuapp.com/
 
 ### Prerequisites
 
@@ -15,7 +15,7 @@ To run locally, you'll need Node, Express, Mysql2, and Sequelize. To veiw full d
 
 ## Deployment
 
-This website is deployed with Heroku. Visit it at ***PLACE URL HERE***
+This website is deployed with Heroku. Visit it at https://dudley-toonie-83402.herokuapp.com/
 
 ## Built With
 
