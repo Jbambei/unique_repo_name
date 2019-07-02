@@ -8,19 +8,19 @@ module.exports = function(sequelize, DataTypes) {
     },
     plan_title: {
       type: DataTypes.STRING,
-      required: true,
+      allowNull: false,
       len: [2, 100]
     },
     plan_author: {
       type: DataTypes.STRING,
-      required: true,
+      allowNull: false,
       is: ["^[a-z]+$", "i"], // will only allow letters
       len: [2, 50]
     },
     plan_content: {
       type: DataTypes.TEXT,
       len: [100, 65000],
-      required: true,
+      allowNull: false
     }
   });
   Plans.associate = function(models) {
