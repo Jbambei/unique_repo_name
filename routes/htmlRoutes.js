@@ -15,12 +15,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/view.html"));
   });
 
-  app.get("/writescenario", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/writescenario.html"));
+  app.get("/writeScenario", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/writeScenario.html"));
   });
 
-  app.get("/writeplan", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/writeplan.html"));
+  app.get("/writePlan", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/writePlan.html"));
   });
 
   // app.get("/scenario", function(req, res) {
