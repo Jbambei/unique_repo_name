@@ -48,60 +48,63 @@ body {
 }
 
 #writePlanButton {
-  margin-top: 2%;
-  background-color: #747762;
-  color: #ceceb7;
-  font-size: 16px;
+  background-color: #303e3a;
+  color: #ede8c2;
+  border-width: 2px;
+  border: #ede8c2;
   /* margin-bottom: 2%; */
 }
 
 #writePlanButton:hover {
-  background-color: #ceceb7;
-  color:#747762;
+  background-color: #303e3a;
+  color: #ede8c2;
+  border-width: 2px;
+  border: #ede8c2
 }
 
 .scenarioButton {
-  background-color: #747762;
-  color: #ceceb7;
+  background-color: #ede8c2;
+  color: #303e3a;
+  border-width: 2px;
+  border: #303e3a;
   position: absolute;
   right: 0;
   bottom: 0;
-  border: #ceceb7
 }
 
 .scenarioButton:hover {
-  background-color: #ceceb7;
-  color: #747762;
+  background-color: #303e3a;
+  color: #ede8c2;
   border-width: 2px;
-  border-color: #ceceb7;
+  border: #ede8c2;
 }
 
 .searchButton {
-  background-color: #343a40;
-  color: #ceceb7;
+  background-color: #ede8c2;
+  color: #303e3a;
   border-width: 2px;
-  border-color: #ceceb7;
+  border: #303e3a;
 }
 
 .searchButton:hover{
-  background-color: #ceceb7;
-  color: #343a40;
+  background-color: whitesmoke;
+  color: #303e3a;
   border-width: 2px;
-  border-color: #343a40;
+  border: #303e3a;
 }
 
 .submitPlanButton{
-  background-color: #747762;
-  color: #ceceb7;
+  background-color: #ede8c2;
+  color: #303e3a;
   border-width: 2px;
-  border: #ceceb7
+  border: #303e3a
 }
 
 .submitPlanButton:hover{
-  background-color: #ceceb7;
-  color: #747762;
+  background-color: #303e3a;
+  color: #ede8c2;
   border-width: 2px;
-  border: #747762
+  border: #ede8c2
 }
 
 .cardinfo{
