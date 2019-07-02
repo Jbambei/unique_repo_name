@@ -28,7 +28,9 @@
 }
 
 .cardinfo {
-  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border: 5px;
+  border-color: white;
   margin: 10px;
 }
 body {
