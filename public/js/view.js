@@ -3,7 +3,9 @@ var createScenarioTitle = $("<h5>");
 var createScenarioPicture = $("<img>");
 var cardText = $("<p>");
 var scenarioButton = $("<button>");
-var anchor = $("<a>")
+var deleteButton = $("<button>");
+var anchor = $("<a>");
+
 $(function () {
   $.ajax("/api/scenario", {
     type: "get"
@@ -16,7 +18,6 @@ $(function () {
       console.log(data);
       console.log(data[i].scenario_title);
       console.log(data[i].scenario_author);
-      // console.log(data[i].scenario_content);
       console.log(data[i].scenario_image_url);
       createScenario();
       createScenarioTitle.attr("id", "cardTitle" + data[i].id);
@@ -24,8 +25,14 @@ $(function () {
       cardText.attr("id", "cardText" + data[i].id);
       scenarioButton.attr("id", "cardButton" + data[i].id);
       scenarioButton.attr("value", data[i].id);
+      scenarioButton.attr("onclick", "goToScenarioPage()");
+      deleteButton.attr("id", "cardButton" + data[i].id);
+      deleteButton.attr("value", data[i].id);
+      deleteButton.attr("onclick", "handleDelete()");
+      editButton.attr("id", "cardButton" + data[i].id);
+      editButton.attr("value", data[i].id);
+      editButton.attr("onclick", "goToEditScenario()");
       anchor.attr("id", "anchorId" + data[i].id);
-      anchor.attr("href", "/scenario");
       $("#cardTitle" + data[i].id).html(data[i].scenario_title);
       $("#cardPicture" + data[i].id).attr("src", data[i].scenario_image_url);
       $("#cardText" + data[i].id).text(briefDescription);
@@ -38,6 +45,25 @@ $(function () {
     });
   });
 });
+
+function handleDelete() {
+  let id = localStorage.getItem("id");
+  $.ajax({
+    method: "delete",
+    url: "/api/scenario/" + id
+  })
+    .then(window.location.reload());
+}
+
+function goToScenarioPage () {
+  window.location = "/scenario";
+}
+
+function goToEditScenario () {
+  window.location = "/editScenario";
+}
+
+
 function createScenario() {
   var newScenario = $("<section>");
   newScenario.addClass("cardinfo animated rollIn");
@@ -81,9 +107,21 @@ function createScenario() {
   })
   createCardTextColumn.append(cardText);
   anchor = $("<a>");
+  deleteAnchor = $("<a>");
+  editAnchor = $("<a>");
   scenarioButton = $("<button>");
   scenarioButton.text("View Full Scenario");
   scenarioButton.addClass("btn btn-primary scenarioButton");
-  anchor.append(scenarioButton)
+  deleteButton = $("<button>");
+  deleteButton.text("Delete Scenario");
+  deleteButton.addClass("btn btn-primary deleteButton");
+  editButton = $("<button>");
+  editButton.text("Edit Scenario");
+  editButton.addClass("btn btn-primary scenarioButton");
+  anchor.append(scenarioButton);
+  anchor.append(deleteButton);
+  anchor.append(editButton);
+  createCardTextColumn.append(anchor);
+  createCardTextColumn.append(anchor);
   createCardTextColumn.append(anchor);
 }

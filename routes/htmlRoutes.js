@@ -23,6 +23,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/writePlan.html"));
   });
 
+  app.get("/editScenario", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/editScenario.html"));
+  });
+
   // app.get("/scenario", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/scenario.html/:id"));
   // });
