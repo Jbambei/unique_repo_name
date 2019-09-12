@@ -1,28 +1,25 @@
 $(function () {
 
+    let id = localStorage.id;
+
     $.ajax("/api/scenario/" + localStorage.id, {
         type: "get"
     }).then(function (data) {
-        // console.log(data);
-        // console.log(data.scenario_title);
-        // console.log(data.scenario_author);
-        // console.log(data.scenario_content);
         $("#scenarioAuthor").val(data.scenario_author);
         $("#scenarioTitle").val(data.scenario_title);
         $("#scenarioStory").val(data.scenario_content);
         $("#scenarioImage").val(data.scenario_image_url);
     });
 
-    $(".newScenario").on("submit", function (event) {
+    $(".scenarioEdit").on("submit", function (event) {
         event.preventDefault();
-
         if (
             $("#scenarioTitle").val() !== "" &&
             $("#scenarioAuthor").val() !== "" &&
             $("#scenarioStory").val() !== "" &&
             $("#scenarioImage").val() !== ""
         ) {
-            var newScenario = {
+            var scenarioEdit = {
                 scenario_title: $("#scenarioTitle")
                     .val()
                     .trim(),
@@ -36,14 +33,17 @@ $(function () {
                     .val()
                     .trim()
             };
+            scenarioEdit.id = id;
+            update(scenarioEdit);
         }
-        console.log(newScenario);
+    });
 
-        $.ajax("/api/scenario/", localStorage.id, {
+    function update(scenarioEdit) {
+        $.ajax("/api/scenario/", {
             type: "put",
-            data: newScenario
+            data: scenarioEdit,
         }).then(function () {
             location.pathname = "./view";
         });
-    });
+    }
 });
